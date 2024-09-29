@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    image: itap-system:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    tty: true
+    volumes:
+      - .:/var/www  # ホストの現在のディレクトリをコンテナの/var/wwwにマウント
+    working_dir: /var/www  # 作業ディレクトリを/var/wwwに設定
+    command: ./gradlew bootRun

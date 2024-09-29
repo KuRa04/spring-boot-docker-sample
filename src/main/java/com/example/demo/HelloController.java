@@ -8,6 +8,6 @@ public class HelloController {
 
   @GetMapping("/hello")
   public String hello() {
-    return "hello world";
+    return "docker-compose-spring-hogehoge";
   }
 }
