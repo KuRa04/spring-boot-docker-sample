@@ -7,9 +7,6 @@ WORKDIR /var/www
 # プロジェクト全体をコンテナにコピー
 COPY . .
 
-# gradlewに実行権限を付与
-RUN chmod +x ./gradlew
-
 # 必要な依存関係を取得し、ビルド
 RUN ./gradlew build --no-daemon
 
